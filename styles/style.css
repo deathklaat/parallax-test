@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-purple-first: #2b1055;
+    --color-purple-second: #7597de;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(var(--color-purple-first), var(--color-purple-second));
+    overflow-x: hidden;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar__item {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.navbar__item a {
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+.navbar__item a:hover,
+a.navbar__item--active
+{
+    background: var(--color-white);;
+    color: #2b1055;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.moon {
+    mix-blend-mode: screen;
+}
+
+.mountains-front {
+    z-index: 10;
+}
+
+.title {
+    position: absolute;
+    right: -50%;
+    color: var(--color-white);
+    white-space: normal;
+    font-size: 7.5em;
+    z-index: 9;
+    pointer-events: none;
+}
+
+.button {
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 40px;
+    color: var(--color-purple-first);
+    background: var(--color-white);
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+    user-select: none;
+}
+
+.section {
+    position: relative;
+    padding: 100px;
+    background: var(--color-purple-first);
+    z-index: 10;
+}
+
+section:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--color-purple-first), transparent);
+    z-index: 1000;
+}
+
+.section h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: var(--color-white);
+}
+
+.section p {
+    font-size: 1em;
+    color: var(--color-white)
+}
